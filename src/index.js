@@ -20,7 +20,6 @@ async function getData(location){
         const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=8c16a0f9726049ebb9113634232512&q=${location}`,{ mode: "cors" })
         const weatherData = await response.json();
         weatherJson = weatherData
-        console.log(weatherJson)
     }catch(err){
         console.error(err);
     }
@@ -60,7 +59,6 @@ temperature.addEventListener("click",()=>{
     }else{
         unit = "c"
     }
-    console.log(unit)
     weatherDom()
 })
 
